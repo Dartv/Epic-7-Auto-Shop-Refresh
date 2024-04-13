@@ -50,28 +50,26 @@ AutoRefresh() {
         return
     }
 
-    SearchAndBuy("covenant")
-    Sleep()
-    SearchAndBuy("mystic")
+    loop {
+        SearchAndBuy("covenant")
+        Sleep()
+        SearchAndBuy("mystic")
 
-    sleep, % 50
+        sleep, % 50
 
-    Scroll()
+        Scroll()
 
-    sleep, % 50
+        sleep, % 50
 
-    SearchAndBuy("covenant")
-    Sleep()
-    SearchAndBuy("mystic")
+        SearchAndBuy("covenant")
+        Sleep()
+        SearchAndBuy("mystic")
 
-    Refresh()
+        Refresh()
 
-    ; wait for transition to finish
-    sleep, % 1000
-
-    AutoRefresh()
-
-    return
+        ; wait for transition to finish
+        sleep, % 1000
+    }
 }
 
 LogMousePos() {
