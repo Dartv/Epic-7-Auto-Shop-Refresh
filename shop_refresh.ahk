@@ -2,6 +2,7 @@
 CoordMode, Pixel, Window
 SetTitleMatchMode, 2
 
+; Works with google play games only
 FocusWindow() {
     tt = Epic Seven ahk_class CROSVM_1
     WinWait, %tt%
@@ -41,8 +42,6 @@ SearchAndBuy(name) {
 }
 
 AutoRefresh() {
-    FocusWindow()
-
     WinGetPos, OutX, OutY, OutWidth, OutHeight, A
 
     if (OutWidth != 1920 || OutHeight != 1080) {

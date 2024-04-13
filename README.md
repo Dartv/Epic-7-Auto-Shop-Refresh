@@ -6,6 +6,8 @@ Auto Hotkey script to automatically buy covenant and mystic bookmarks and refres
 2. Download and extract e7_auto_shop_refresh.zip anywhere
 3. Open shop_refresh.ahk
 3. Set resolution to **1920 x 1080**. it won't work with any other resolution.
+4. Focus game window
+5. Press F1
 
 # How to use
 F1 - Start
