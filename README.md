@@ -15,4 +15,6 @@ F2 - Pause/Unpause
 Esc - Exit
 
 # Note
+Tested on Google Play Games PC client.
+
 Use at your own risk. I can't guarantee that it will work 100% of the time and that you will not get banned.
