@@ -1,8 +1,6 @@
 ﻿CoordMode, Mouse, Window
 CoordMode, Pixel, Window
 SetTitleMatchMode, 2
-covenant = %A_ScriptDir%\covenant.png
-mystic = %A_ScriptDir%\mystic.png
 
 FocusWindow() {
     tt = Epic Seven ahk_class CROSVM_1
@@ -32,7 +30,7 @@ Scroll() {
 }
 
 SearchAndBuy(name) {
-    ImageSearch, FoundX, FoundY, 820, 0, 1024, 1080, *124 %A_ScriptDir%\%name%.png
+    ImageSearch, FoundX, FoundY, 820, 0, 1024, 1080, *128 %A_ScriptDir%\%name%.png
     
     if (ErrorLevel = 2)
         MsgBox Could not conduct the search. Icon not found?
@@ -44,6 +42,13 @@ SearchAndBuy(name) {
 
 AutoRefresh() {
     FocusWindow()
+
+    WinGetPos, OutX, OutY, OutWidth, OutHeight, A
+
+    if (OutWidth != 1920 || OutHeight != 1080) {
+        MsgBox, The active window is %OutWidth%x%OutHeight%, set to 1920x1080
+        return
+    }
 
     SearchAndBuy("covenant")
     Sleep()
@@ -74,6 +79,6 @@ F1::
     AutoRefresh()
 return
 
-Esc::ExitApp
-
 F2::Pause
+
+Esc::ExitApp
