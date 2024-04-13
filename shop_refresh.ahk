@@ -5,7 +5,6 @@ SetTitleMatchMode, 2
 ; Works with google play games only
 FocusWindow() {
     tt = Epic Seven ahk_class CROSVM_1
-    WinWait, %tt%
     IfWinNotActive, %tt%,, WinActivate, %tt%
 }
 
@@ -42,6 +41,8 @@ SearchAndBuy(name) {
 }
 
 AutoRefresh() {
+    FocusWindow()
+
     WinGetPos, OutX, OutY, OutWidth, OutHeight, A
 
     if (OutWidth != 1920 || OutHeight != 1080) {
@@ -53,13 +54,20 @@ AutoRefresh() {
     Sleep()
     SearchAndBuy("mystic")
 
+    sleep, % 50
+
     Scroll()
+
+    sleep, % 50
 
     SearchAndBuy("covenant")
     Sleep()
     SearchAndBuy("mystic")
 
     Refresh()
+
+    ; wait for transition to finish
+    sleep, % 500
 
     AutoRefresh()
 
