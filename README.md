@@ -8,9 +8,11 @@ Auto Hotkey script to automatically buy covenant and mystic bookmarks and refres
 3. Set resolution to **1920 x 1080**. it won't work with any other resolution.
 
 # How to use
-F1 - start
-F2 - stop
-Esc - exit
+F1 - Start
+
+F2 - Pause/Unpause
+
+Esc - Exit
 
 # Note
 Use at your own risk. I can't guarantee that it will work 100% of the time and that you will not get banned.
