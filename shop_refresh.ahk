@@ -67,7 +67,7 @@ AutoRefresh() {
     Refresh()
 
     ; wait for transition to finish
-    sleep, % 500
+    sleep, % 1000
 
     AutoRefresh()
 
