@@ -64,6 +64,7 @@ AutoRefresh() {
         SearchAndBuy("covenant")
         Sleep()
         SearchAndBuy("mystic")
+        Sleep()
 
         Refresh()
 
