@@ -38,6 +38,7 @@ SearchAndBuy(name) {
         MouseClick, L, FoundX + 840, FoundY + 80
         Sleep()
         MouseClick, L, 1024, 760
+        Sleep()
 }
 
 AutoRefresh() {
@@ -52,7 +53,6 @@ AutoRefresh() {
 
     loop {
         SearchAndBuy("covenant")
-        Sleep()
         SearchAndBuy("mystic")
 
         sleep, % 50
@@ -62,9 +62,7 @@ AutoRefresh() {
         sleep, % 50
 
         SearchAndBuy("covenant")
-        Sleep()
         SearchAndBuy("mystic")
-        Sleep()
 
         Refresh()
 
