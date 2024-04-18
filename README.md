@@ -19,4 +19,6 @@ Esc - Exit
 # Note
 Tested on Google Play Games PC client.
 
+If the script skips bookmarks and mystic, it's likely a resolution/dpi issue. Take your own screenshots and replace icons.
+
 Use at your own risk. I can't guarantee that it will work 100% of the time and that you will not get banned.
