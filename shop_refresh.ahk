@@ -8,9 +8,8 @@ FocusWindow() {
     IfWinNotActive, %tt%,, WinActivate, %tt%
 }
 
-Sleep() {
-    Random, rand, 200, 300
-    sleep, %rand%
+Sleep(time := 300) {
+    sleep, %time%
 }
 
 Refresh() {
@@ -35,7 +34,7 @@ SearchAndBuy(name) {
     if (ErrorLevel = 2)
         MsgBox Could not conduct the search. Icon not found?
     else if (ErrorLevel = 0)
-        MouseClick, L, FoundX + 840, FoundY + 80
+        MouseClick, L, FoundX + 900, FoundY + 90
         Sleep()
         MouseClick, L, 1024, 760
         Sleep()
@@ -52,6 +51,8 @@ AutoRefresh() {
     }
 
     loop {
+        sleep, % 50
+
         SearchAndBuy("covenant")
         SearchAndBuy("mystic")
 
